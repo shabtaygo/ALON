@@ -1,4 +1,5 @@
 start();
+
 function start() {
     console.log("start");
     fetch('https://jsonplaceholder.typicode.com/posts').then(
