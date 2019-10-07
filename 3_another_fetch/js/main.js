@@ -5,20 +5,21 @@ function start() {
         data => {
             data.json().then(
                 data => {
+                    //building div for posts list 
                     var a = `<div class="container-fluide">
                                 <h1 class="text-center"><u> watch at comments on each article</u></h1>
                                 <br>
                                 <div class="container"></div>
                             </div>`;
                 
-                    // var list = document.getElementById('list');
+                    // create list of posts
                     var list = `<ol id="list">`;
                     data.forEach(element => {
                         list += `<li><button type="button" onclick="comments(${element.userId},${element.id})"
                      class="btn btn-link text-left">${element.title}</button></li>`
                     });
                     list += '</ol>';
-                    
+                    // pushing div and posts list to DOM
                     document.getElementsByTagName('body')[0].innerHTML += a;
                     document.getElementsByClassName('container')[0].innerHTML += list;
                 }
@@ -28,10 +29,13 @@ function start() {
 }
 
 function back() {
+    //remove all elements in the DOM
     document.getElementsByClassName('container-fluide')[0].remove();
+    //rebuilding the DOM
     start();
 }
 
+//event of all posts
 function comments(userId, id) {
 
     // get author name
