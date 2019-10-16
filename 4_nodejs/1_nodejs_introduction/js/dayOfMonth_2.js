@@ -1,3 +1,11 @@
+// כתוב תוכנית המקבלת מספר המייצג יום בחודש.
+// אם התאריך הוא 1 לחודש : הפלט יהיה good month
+// אם התאריך הוא בין 2-10 לחודש הפלט יהיה  : Working..
+// אם התאריך הוא 10 לחודש אני אדפיס : SALARY DAY
+// אם התאריך הוא בין 11-20 לחודש  הפלט יהיה  : BE HAPPY
+// אם התאריך הוא בין 20-30 לחודש הפלט יהיה:  the End
+// אם התאריך הוא 31 לחודש הפלט יהיה : BOOM BOOM
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -7,9 +15,7 @@ const rl = readline.createInterface({
 
 
 rl.question('enter a day in month ', (answer) => {
-    // TODO: Log the answer in a database
     var int = parseInt(answer);
-
     if (int > 0) {
         if (int == 1) {
             console.log("good month")

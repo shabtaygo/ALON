@@ -1,7 +1,7 @@
-// console.log("enter a Integer");
-// while (condition) {
+// כתבו תוכנית הקולטת מהשתמש מספר שלם.
+// אם הקלט הוא יהיה מספר לא שלם, המשתמש יקבל הודעה "אנא הזן מספר שלם".
+// הפלט של התוכנית יהיה האם המספר הוא זוגי או לא + המספר שהתקבל מהמשתמש.
 
-// }
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -11,10 +11,9 @@ const rl = readline.createInterface({
 
 
 rl.question('enter a Integer ', (answer) => {
-    // TODO: Log the answer in a database
     var int = parseInt(answer);
     var float = parseFloat(answer);
-    console.log(int==float)
+    //checking if input number is a int
     if (int == float) {
         if (!int % 2) {
             console.log(`Yor numer ${int} is even`);
@@ -22,10 +21,8 @@ rl.question('enter a Integer ', (answer) => {
             console.log(`Yor numer ${int} is odd`);
         }
     }
-    else{
+    else {
         console.log("Please enter an integer number");
     }
-   
     rl.close();
 });
-// var request = require('request');

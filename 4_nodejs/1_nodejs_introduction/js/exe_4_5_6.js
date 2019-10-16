@@ -1,5 +1,7 @@
 
-// //exe 4
+//exe 4
+//  כתבו פונקציה שמקבלת מערך שכל התאים בו הם string 
+// ומחזירה לי את המילה הכי ארוכה
 function longest(params) {
     return (params.map(String)).reduce((a, b) => a.length > b.length ? a : b, '');
 }
@@ -15,6 +17,9 @@ console.log(`The longest word is:  ${longest(numbers)}`);
 console.log('------------------------------------------------------------');
 
 //exe 5
+// כתבו פונקציה שמקבלת מערך מסוג string
+// ומחזירה לי רק את התאים שיש בהם יותר מ 5 אותיות.
+
 function moreThen5(params) {
     return params.map(String).filter(word => word.length > 5);
 }
@@ -24,7 +29,9 @@ console.log(`The words's length more then 5 is:  ${moreThen5(numbers)}`);
 console.log(`The words's length more then 5 is:  ${moreThen5(plorp)}`);
 console.log('------------------------------------------------------------');
 
-//exe 6 
+// //exe 6 
+// כתבו פונקציה המקבלת מערך של מספרים
+// ומחזירה לי את הכפל של כל האיברים במערך.
 var justNumbers1 = [2,3,4,5,6];
 var justNumbers2 = [2.5,3.7,4.04,5.7,6.88];
 
