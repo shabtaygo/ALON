@@ -5,6 +5,6 @@ var pushValuse = require('./arrays_value');
 var sum = require('./arrays_sum');
 
 console.log(`The new array is:\n ${sum.getSum(pushValuse.pushValuse(creatingArr.creatingArr()))}`)
-
+ 
 
 
